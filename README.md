@@ -1,68 +1,38 @@
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+## Define problem: Users don’t know how to use our todos api! Lets make a front end that lets them create, view, and complete their todos.
 
-## Available Scripts
+# Front end vertical Slices
 
-In the project directory, you can run:
+## List Todos
+	Use hard coded todos from .json file
+		- console.log out the todos file in React code and see it in the browser
+	Render simple todos on the page
+		- I can see simple todos rendered in the browser
+---
+    Later: Make styles better
+	Later: Use hard coded seed todos from SQL and express
+		- We can log out data from the endpoint to react
+		- We can see the endpoint data rendered in react components
 
-### `npm start`
+## Create Todos
+	- We need to add a form on the list page with a text input and a submit button
+		- Make sure my event handlers work on the input and the button by logging out to the console onClick and on change
+			- first, log out hello world
+			- then, log out actual values from user input
+	- Once I know my event handlers work, I want to put the new todo into my state on click
+			- first, lets do it a fake, front-end todo
+---
+	Later: then, let’s hit out create todo route and make an ACTUAL todo to put on the page
 
-Runs the app in the development mode.<br />
-Open [http://localhost:3000](http://localhost:3000) to view it in the browser.
+## Complete Todos
+	- When the user clicks on the todo, it should change to DONE (strikethru)
+		- Make sure my event listeners work by logging out 1) hello world, then 2) the todo on click of Todo
+		- Change state so that this todo is complete (all front-end)
+			- console log state in render to validate that this happened
+		- In render, if a todo is completed, style it differently
+---
+	Later, hook this up to back end
+		
 
-The page will reload if you make edits.<br />
-You will also see any lint errors in the console.
-
-### `npm test`
-
-Launches the test runner in the interactive watch mode.<br />
-See the section about [running tests](https://facebook.github.io/create-react-app/docs/running-tests) for more information.
-
-### `npm run build`
-
-Builds the app for production to the `build` folder.<br />
-It correctly bundles React in production mode and optimizes the build for the best performance.
-
-The build is minified and the filenames include the hashes.<br />
-Your app is ready to be deployed!
-
-See the section about [deployment](https://facebook.github.io/create-react-app/docs/deployment) for more information.
-
-### `npm run eject`
-
-**Note: this is a one-way operation. Once you `eject`, you can’t go back!**
-
-If you aren’t satisfied with the build tool and configuration choices, you can `eject` at any time. This command will remove the single build dependency from your project.
-
-Instead, it will copy all the configuration files and the transitive dependencies (webpack, Babel, ESLint, etc) right into your project so you have full control over them. All of the commands except `eject` will still work, but they will point to the copied scripts so you can tweak them. At this point you’re on your own.
-
-You don’t have to ever use `eject`. The curated feature set is suitable for small and middle deployments, and you shouldn’t feel obligated to use this feature. However we understand that this tool wouldn’t be useful if you couldn’t customize it when you are ready for it.
-
-## Learn More
-
-You can learn more in the [Create React App documentation](https://facebook.github.io/create-react-app/docs/getting-started).
-
-To learn React, check out the [React documentation](https://reactjs.org/).
-
-### Code Splitting
-
-This section has moved here: https://facebook.github.io/create-react-app/docs/code-splitting
-
-### Analyzing the Bundle Size
-
-This section has moved here: https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size
-
-### Making a Progressive Web App
-
-This section has moved here: https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app
-
-### Advanced Configuration
-
-This section has moved here: https://facebook.github.io/create-react-app/docs/advanced-configuration
-
-### Deployment
-
-This section has moved here: https://facebook.github.io/create-react-app/docs/deployment
-
-### `npm run build` fails to minify
-
-This section has moved here: https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify
+---
+Create Users
+Only show a single User’s todos
