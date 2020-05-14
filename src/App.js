@@ -33,14 +33,21 @@ export default class App extends Component {
           </ul>
           <Switch>
             <Route exact path='/login' render={(routerProps) => <Login 
-              handleTokenChange={this.handleTokenChange} 
-              {...routerProps} />} 
+                handleTokenChange={this.handleTokenChange} 
+                {...routerProps} />} 
               />
-            <Route exact path='/signup' render={(routerProps) => <SignUp 
-              handleTokenChange={this.handleTokenChange} 
-              {...routerProps}/>} 
+            <Route 
+            exact path='/signup' 
+              render={(routerProps) => <SignUp 
+                handleTokenChange={this.handleTokenChange} 
+                {...routerProps}/>} 
               />
-            <PrivateRoute exact path='/todos' token={this.state.token} render={Todos} />
+            <PrivateRoute 
+              exact 
+              path='/todos' 
+              token={this.state.token} 
+              render={(routerProps) => <Todos 
+              {...routerProps} />} />
           </Switch>
         </Router>
       </div>

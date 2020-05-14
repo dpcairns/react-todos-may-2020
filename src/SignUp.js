@@ -31,7 +31,7 @@ export default class SignUp extends Component {
                     <input onChange={(e) => this.setState({ password: e.target.value })} value={this.state.password} />
                 </label>
                 <br/>
-                <button>sign in</button>
+                <button>sign up</button>
             </form>
             </div>
         )

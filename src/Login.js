@@ -1,10 +1,38 @@
 import React, { Component } from 'react'
 
-export default class Login extends Component {
+export default class LogIn extends Component {
+    state = {
+        email: '',
+        password: '',
+    }
+
+    handleSubmit = (e) => {
+        e.preventDefault();
+
+        const token = Math.random();
+
+        console.log('=============================\n')
+        console.log('|| token', token, this.state.email, this.state.password)
+        console.log('\n=============================')
+
+        this.props.handleTokenChange(token);
+    }
     render() {
         return (
             <div>
-                log in
+            <form onSubmit={this.handleSubmit}>
+                <label>
+                    email
+                    <input onChange={(e) => this.setState({ email: e.target.value })} value={this.state.email} />
+                </label>
+                <br/>
+                <label>
+                    password
+                    <input onChange={(e) => this.setState({ password: e.target.value })} value={this.state.password} />
+                </label>
+                <br/>
+                <button>log in</button>
+            </form>
             </div>
         )
     }
