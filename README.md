@@ -22,7 +22,8 @@ test('renders learn react link', () => {
 ```
 1) Run tests locally to create a snapshot.
 1) Make sure your snapshot is what you'd "expect" to see. 
-1) ACP, then click actions then `Setup this Workflow` and `Add Commit` in github to add CI.
+1) ACP, then in github click `actions` then click `Set up this Workflow`
+1) Click `Start Commit` in github to add CI.
 
 ![](./github-actions.png)
 
