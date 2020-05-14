@@ -16,6 +16,7 @@ export default class LogIn extends Component {
         console.log('\n=============================')
 
         this.props.handleTokenChange(token);
+        this.props.history.push('/todos');
     }
     render() {
         return (
