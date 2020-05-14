@@ -1,0 +1,54 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`renders learn react link 1`] = `
+<div>
+  <BrowserRouter>
+    <ul>
+      <Link
+        to="/todos"
+      >
+        <li>
+          todos
+        </li>
+      </Link>
+      <Link
+        to="/signup"
+      >
+        <li>
+          sign up
+        </li>
+      </Link>
+      <Link
+        to="/login"
+      >
+        <li>
+          sign in
+        </li>
+      </Link>
+      <button
+        onClick={[Function]}
+      >
+        logout
+      </button>
+    </ul>
+    <Switch>
+      <Route
+        exact={true}
+        path="/login"
+        render={[Function]}
+      />
+      <Route
+        exact={true}
+        path="/signup"
+        render={[Function]}
+      />
+      <PrivateRoute
+        exact={true}
+        path="/todos"
+        render={[Function]}
+        token=""
+      />
+    </Switch>
+  </BrowserRouter>
+</div>
+`;

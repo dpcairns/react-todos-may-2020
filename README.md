@@ -1,3 +1,27 @@
+## To get tests working:
+1) `npm i enzyme jest-enzyme enzyme-adapter-react-16`
+1) in `setupTests.js`:
+```
+import '@testing-library/jest-dom/extend-expect';
+import 'jest-enzyme';
+import { configure } from 'enzyme';
+import Adapter from 'enzyme-adapter-react-16';
+configure({ adapter: new Adapter() });
+```
+1) Use snapshots:
+
+```js
+import React from 'react';
+import { shallow } from 'enzyme';
+import App from './App';
+
+test('renders learn react link', () => {
+  const wrapper = shallow(<App />);
+  expect(wrapper).toMatchSnapshot();
+});
+```
+1) ACP, then click actions in github to add CI.
+
 ## Define problem: Users don’t know how to use our todos api! Lets make a front end that lets them create, view, and complete their todos.
 
 # Front end vertical Slices
