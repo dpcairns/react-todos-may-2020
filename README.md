@@ -20,7 +20,15 @@ test('renders learn react link', () => {
   expect(wrapper).toMatchSnapshot();
 });
 ```
-1) ACP, then click actions in github to add CI.
+1) Run tests locally to create a snapshot.
+1) Make sure your snapshot is what you'd "expect" to see. 
+1) ACP, then click actions then `Setup this Workflow` and `Add Commit` in github to add CI.
+
+![](./github-actions.png)
+
+---
+
+![](./actions-2.png)
 
 ## Define problem: Users don’t know how to use our todos api! Lets make a front end that lets them create, view, and complete their todos.
 
